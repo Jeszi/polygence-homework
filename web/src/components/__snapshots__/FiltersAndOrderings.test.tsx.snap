@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FiltersAndOrderings component should render component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdvvtL dQIffU"
+  >
+    <div
+      class="sc-hKwDye fwPSRI"
+    >
+      <select>
+        <option
+          value="spent_at|desc"
+        >
+          Sort by Date descending (default)
+        </option>
+        <option
+          value="spent_at|asc"
+        >
+          Sort by Date ascending
+        </option>
+        <option
+          value="amount|desc"
+        >
+          Sort by Amount descending
+        </option>
+        <option
+          value="amount|asc"
+        >
+          Sort by Amount ascending
+        </option>
+      </select>
+    </div>
+    <ul
+      class="sc-gsDKAQ fWdgni"
+    >
+      <li>
+        <button
+          class="sc-dkPtRN cPwnpl"
+          data-testid="filter-button-ALL"
+          name="ALL"
+        >
+          ALL
+        </button>
+      </li>
+      <li>
+        <button
+          class="sc-dkPtRN bNGCDu"
+          data-testid="filter-button-USD"
+          name="USD"
+        >
+          USD
+        </button>
+      </li>
+      <li>
+        <button
+          class="sc-dkPtRN bNGCDu"
+          data-testid="filter-button-HUF"
+          name="HUF"
+        >
+          HUF
+        </button>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

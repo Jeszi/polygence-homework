@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component should render component 1`] = `
+<DocumentFragment>
+  <form
+    class="sc-furwcr gJUcca"
+  >
+    <input
+      class="sc-gsDKAQ lhwlFl"
+      data-testid="description-input"
+      name="description"
+      placeholder="description"
+      type="text"
+      value=""
+    />
+    <input
+      class="sc-gsDKAQ lhwlFl"
+      data-testid="amount-input"
+      min="0"
+      name="amount"
+      placeholder="amount"
+      type="number"
+      value="0"
+    />
+    <select
+      class="sc-hKwDye husJyr"
+      data-testid="currency-input"
+      name="currency"
+    >
+      <option
+        value="HUF"
+      >
+        HUF
+      </option>
+      <option
+        value="USD"
+      >
+        USD
+      </option>
+    </select>
+    <div
+      class="sc-bdvvtL bMEsbY"
+      data-testid="save-button"
+    >
+      Save
+    </div>
+  </form>
+</DocumentFragment>
+`;
