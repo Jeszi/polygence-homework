@@ -2,7 +2,7 @@ import { v4 as uuid } from "uuid";
 
 const dataBase = [];
 
-function findById(id: string) {
+function findById<T>(id: string): T {
   try {
     return dataBase.find((dbRecord) => dbRecord.id === id);
   } catch (e) {
@@ -10,7 +10,7 @@ function findById(id: string) {
   }
 }
 
-function findAll() {
+function findAll<T>(): T[] {
   try {
     return dataBase;
   } catch (e) {
@@ -18,7 +18,7 @@ function findAll() {
   }
 }
 
-function insert(item: any) {
+function insert<T>(item: T) {
   try {
     const newItem = {
       id: uuid(),

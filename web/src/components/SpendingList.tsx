@@ -30,7 +30,7 @@ export const SpendingList: React.FC = () => {
     return orderBy(sortableSpendings, [sortBy], [sortDirection]);
   }
 
-  function getFilteredSpendings() {
+  function getFilteredSpendings(): SpendingDB[] {
     if (!spendings) {
       return [];
     }
