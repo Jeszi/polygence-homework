@@ -1,12 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+interface CurrencyButtonProps {
+  name: string;
+  currencyFilter?: string;
+}
+
+interface AmountProps {
+  currency: string;
+}
 
 export const FiltersWrapper = styled.div`
   display: flex;
   margin-bottom: 2rem;
 
-@media (max-width: 756px) {
-  flex-direction: column;
-}
+  @media (max-width: 756px) {
+    flex-direction: column;
+  }
 `;
 
 export const CurrencyFilters = styled.ul`
@@ -16,21 +25,21 @@ export const CurrencyFilters = styled.ul`
   gap: 1rem;
   margin-left: auto;
 
-@media (max-width: 756px) {
-  margin-left: unset;
-}
+  @media (max-width: 756px) {
+    margin-left: unset;
+  }
 `;
 
-export const CurrencyButton = styled.button`
+export const CurrencyButton = styled.button<CurrencyButtonProps>`
   border: none;
   font-family: var(--font-family);
   font-size: 20px;
   cursor: pointer;
   background-color: ${(p) =>
-    p.name === p.currencyFilter ? '#d1e7fb' : 'var(--color-white)'};
+    p.name === p.currencyFilter ? "#d1e7fb" : "var(--color-white)"};
   color: ${(p) =>
-    p.name === p.currencyFilter ? 'var(--color-blue)' : 'inherit'};
-  font-weight: ${(p) => (p.name === p.currencyFilter ? '700' : '400')};
+    p.name === p.currencyFilter ? "var(--color-blue)" : "inherit"};
+  font-weight: ${(p) => (p.name === p.currencyFilter ? "700" : "400")};
   border-radius: 8px;
   padding: 6px 12px;
   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -57,7 +66,7 @@ export const Orderings = styled.div`
     border: 1px solid darkgray;
     /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
-}
+  }
 `;
 
 export const FormStyles = styled.form`
@@ -69,7 +78,7 @@ export const FormStyles = styled.form`
 
 export const HeaderStyles = styled.header`
   margin-bottom: 4rem;
-  font-family: 'Montserrat', 'Poppins', var(--font-family);
+  font-family: "Montserrat", "Poppins", var(--font-family);
 
   ul {
     list-style-type: none;
@@ -118,7 +127,7 @@ export const LdsDualRing = styled.div`
   height: 80px;
 
   &::after {
-    content: ' ';
+    content: " ";
     display: block;
     width: 64px;
     height: 64px;
@@ -216,13 +225,13 @@ export const AmountWrapper = styled.div`
   }
 `;
 
-export const Amount = styled.h3`
+export const Amount = styled.h3<AmountProps>`
   &::before {
-    content: '${(props) => (props.currency === 'USD' ? '$' : '')}';
+    content: "${(props) => (props.currency === "USD" ? "$" : "")}";
   }
 
   &::after {
-    content: '${(props) => (props.currency === 'HUF' ? ' HUF' : '')}';
+    content: "${(props) => (props.currency === "HUF" ? " HUF" : "")}";
   }
 `;
 

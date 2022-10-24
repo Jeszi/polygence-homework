@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SelectStyles = styled.select`
   appearance: none;
   border: none;
   margin: 0;
+  max-height: 40px;
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
